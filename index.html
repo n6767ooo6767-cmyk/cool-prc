@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070914">
+  <title>NEXUS — Personal Command Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#">NEXUS<span>_</span></a>
+    <div class="status"><i></i> ALL SYSTEMS NOMINAL</div>
+    <button id="themeBtn" class="icon-btn" title="Переключить тему">◐</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">PERSONAL COMMAND CENTER // <span id="clock">--:--:--</span></div>
+      <h1>Build.<br><em>Break.</em><br>Repeat.</h1>
+      <p>Мини-панель для тех, кому обычный new tab кажется слишком скучным.</p>
+      <div class="hero-actions">
+        <button class="primary" id="surprise">⚡ Surprise me</button>
+        <a class="ghost" href="#modules">Explore modules ↓</a>
+      </div>
+    </section>
+
+    <section class="grid" id="modules">
+      <article class="card terminal-card wide">
+        <div class="card-head"><span>TERMINAL</span><button data-copy="npm run chaos">copy</button></div>
+        <div class="terminal" id="terminal">
+          <div><span class="prompt">$</span> nexus --status</div>
+          <div class="dim">checking local modules...</div>
+          <div class="ok">✓ 12 modules online</div>
+          <div class="ok">✓ creativity: 100%</div>
+          <div class="cursor-line"><span class="prompt">$</span> <span id="terminalText"></span><b>▋</b></div>
+        </div>
+      </article>
+
+      <article class="card focus">
+        <div class="card-head"><span>FOCUS</span><span id="focusTime">25:00</span></div>
+        <div class="ring"><div><strong id="timer">25:00</strong><small>DEEP WORK</small></div></div>
+        <div class="timer-actions"><button id="start">START</button><button id="reset">RESET</button></div>
+      </article>
+
+      <article class="card ideas">
+        <div class="card-head"><span>IDEA GENERATOR</span><button id="newIdea">↻</button></div>
+        <div class="idea" id="idea">A website that changes its UI based on the weather.</div>
+        <div class="tag" id="ideaTag">WEB</div>
+      </article>
+
+      <article class="card stats">
+        <div class="card-head"><span>LIVE STATS</span><span class="live">● LIVE</span></div>
+        <div class="stat"><span>Projects shipped</span><b id="projects">17</b></div>
+        <div class="stat"><span>Lines today</span><b id="lines">4,281</b></div>
+        <div class="stat"><span>Chaos level</span><b id="chaos">73%</b></div>
+        <div class="meter"><i id="meter"></i></div>
+      </article>
+
+      <article class="card links">
+        <div class="card-head"><span>QUICK LAUNCH</span></div>
+        <div class="launches">
+          <a href="https://github.com" target="_blank">GitHub <span>↗</span></a>
+          <a href="https://discord.com" target="_blank">Discord <span>↗</span></a>
+          <a href="https://render.com" target="_blank">Render <span>↗</span></a>
+          <a href="https://developer.mozilla.org" target="_blank">MDN <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="card quote wide">
+        <div class="quote-mark">“</div>
+        <p id="quote">The best interface is the one that makes you want to build something.</p>
+        <span>— NEXUS CORE</span>
+      </article>
+    </section>
+  </main>
+
+  <footer><span>NEXUS v1.0</span><span>MADE FOR CURIOUS HUMANS</span><span id="date"></span></footer>
+  <div class="toast" id="toast">Copied!</div>
+  <script src="script.js"></script>
+</body>
+</html>
